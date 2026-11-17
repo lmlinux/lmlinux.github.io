@@ -1,0 +1,10 @@
+# 本地构建产物（仅根目录的 site/）
+/site/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
