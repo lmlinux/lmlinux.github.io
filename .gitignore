@@ -1,0 +1,13 @@
+# 本地构建产物（仅根目录的 site/）
+/site/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
+
+# agent 本地上下文（含内部信息，勿进公开仓）
+/AGENTS.md
