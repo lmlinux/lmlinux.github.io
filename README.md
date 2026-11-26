@@ -1,32 +1,35 @@
 # lmlinux.github.io
 
-AI 相关的技术分享与知识库：<https://lmlinux.github.io>
+Source for <https://lmlinux.github.io>, built with MkDocs Material and deployed to GitHub Pages.
 
-MkDocs + Material 主题，GitHub Pages 托管，push 到 `main` 自动构建部署。
+The site contains bilingual lmlinux landing and download pages, links to the canonical project documentation, and Artificial Intelligence technical notes:
 
-## 本地预览
+- Chinese project page: <https://lmlinux.github.io/lmlinux/>
+- English project page: <https://lmlinux.github.io/en/lmlinux/>
+- Technical notes: <https://lmlinux.github.io/ai/>
+
+## Local preview
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/mkdocs serve     # http://localhost:8000
+.venv/bin/mkdocs serve -a 127.0.0.1:8001
 ```
 
-## 写一页内容
+Open <http://127.0.0.1:8001/>. Port **8001** is the local preview port for this repository.
 
-在 `docs/ai/` 下新建 Markdown，并在 `mkdocs.yml` 的 `nav` 里挂上：
+## Build
 
-```yaml
----
-comments: true   # 可选：开启 giscus 评论区
----
-# 标题
-正文……
+```bash
+.venv/bin/mkdocs build --strict
 ```
 
-## 结构
+## Structure
 
-- `docs/ai/` — Artificial Intelligence
-- `hooks.py` — giscus 评论注入
-- `mkdocs.yml` — 导航 / 主题 / 插件配置
-- `.github/workflows/deploy.yml` — 部署流水线
+- `docs/index.md` — Chinese product landing page
+- `docs/lmlinux/` — Chinese lmlinux overview and download page
+- `docs/en/` — English landing, overview, and download pages
+- `docs/ai/` — Artificial Intelligence notes
+- `hooks.py` — giscus comment integration
+- `mkdocs.yml` — navigation, theme, and plugin configuration
+- `.github/workflows/deploy.yml` — deployment workflow
