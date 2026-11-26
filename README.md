@@ -27,7 +27,6 @@ Open <http://127.0.0.1:8001/>. Port **8001** is the local preview port for this 
 
 - `docs/index.md` — two-entry Chinese homepage
 - `docs/lmlinux/` — single bilingual lmlinux page with clickable language tabs
-- `docs/en/index.md` — two-entry English homepage linking to the shared project page
 - `docs/ai/` — Artificial Intelligence notes
 - `hooks.py` — giscus comment integration
 - `mkdocs.yml` — navigation, theme, and plugin configuration
