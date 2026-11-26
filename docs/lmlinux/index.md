@@ -23,7 +23,7 @@
     - 制品：`ghcr.io/lmlinux/lmlinux-iso:rc`
     - [GHCR 软件包页面](https://github.com/lmlinux/lmlinux/pkgs/container/lmlinux-iso)
     - 文件名：`lmlinux-debian-13.8.0-amd64-cinnamon-live-qwen3.5-9b-q4_k_m-20261125.iso`
-    - 大小：10,030,678,016 字节（约 9.34 GiB）
+    - 大小：10,030,678,016 字节（约 10.03 GB / 9.34 GiB）
     - SHA-256：`2eb28a574c67ce1b9cd6b306162a3f87ca1178ac291e310daa71b2c2bfea7ecd`
 
     使用 [ORAS CLI](https://github.com/oras-project/oras) 拉取并校验：
@@ -73,7 +73,7 @@
     - Artifact: `ghcr.io/lmlinux/lmlinux-iso:rc`
     - [GHCR package page](https://github.com/lmlinux/lmlinux/pkgs/container/lmlinux-iso)
     - Filename: `lmlinux-debian-13.8.0-amd64-cinnamon-live-qwen3.5-9b-q4_k_m-20261125.iso`
-    - Size: 10,030,678,016 bytes (about 9.34 GiB)
+    - Size: 10,030,678,016 bytes (about 10.03 GB / 9.34 GiB)
     - SHA-256: `2eb28a574c67ce1b9cd6b306162a3f87ca1178ac291e310daa71b2c2bfea7ecd`
 
     Pull and verify it with the [ORAS CLI](https://github.com/oras-project/oras):
