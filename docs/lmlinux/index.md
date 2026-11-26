@@ -4,7 +4,7 @@
 
     **内置本地语言模型的 Debian Linux 发行版。**
 
-    lmlinux 基于 Debian 13.8.0 live Cinnamon，面向离线救援，以及无网络环境下的首次安装和首次启动。llama-server 负责 Qwen3.5-9B Q4_K_M 本地推理，hax 负责助手交互及会话保存和恢复；模型权重在构建时写入镜像，不进入 Git 仓库。live 会话及安装后的系统都是普通、完全可写的 Debian，`apt` 可正常使用且变更持久。
+    lmlinux 基于 Debian 13.8.0 live Cinnamon，面向离线救援，以及无网络环境下的首次安装配置。llama-server 负责 Qwen3.5-9B Q4_K_M 本地推理，hax 负责助手交互及会话保存和恢复；模型权重在构建时写入镜像，不进入 Git 仓库。live 会话及安装后的系统都是普通、完全可写的 Debian，`apt` 可正常使用且变更持久。
 
     ## 当前候选版与验证边界
 
