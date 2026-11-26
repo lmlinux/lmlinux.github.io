@@ -4,7 +4,7 @@
 
     **内置本地语言模型的 Debian Linux 发行版。**
 
-    lmlinux 基于 Debian 13.8.0 live Cinnamon，集成 Qwen3.5-9B Q4_K_M、hax 和 llama-server，面向离线救援，以及无网络环境下的首次安装和首次启动。live 会话及安装后的系统都是普通、完全可写的 Debian，`apt` 可正常使用且变更持久；模型权重在构建时写入镜像，不进入 Git 仓库。
+    lmlinux 基于 Debian 13.8.0 live Cinnamon，面向离线救援，以及无网络环境下的首次安装和首次启动。llama-server 负责 Qwen3.5-9B Q4_K_M 本地推理，hax 负责助手交互及会话保存和恢复；模型权重在构建时写入镜像，不进入 Git 仓库。live 会话及安装后的系统都是普通、完全可写的 Debian，`apt` 可正常使用且变更持久。
 
     ## 当前候选版与验证边界
 
@@ -54,7 +54,7 @@
 
     **A Debian-based Linux distribution with a local language model built in.**
 
-    lmlinux is based on Debian 13.8.0 live Cinnamon and integrates Qwen3.5-9B Q4_K_M, hax, and llama-server for offline rescue and for first installation and first boot without a network. Both the live session and an installed system are ordinary, fully writable Debian; `apt` works and changes persist. Model weights are baked into the image at build time and are not stored in the Git repository.
+    lmlinux is based on Debian 13.8.0 live Cinnamon for offline rescue and for first installation and first boot without a network. llama-server provides local Qwen3.5-9B Q4_K_M inference, while hax handles assistant interaction and session save/resume. Model weights are baked into the image at build time and are not stored in the Git repository. Both the live session and an installed system are ordinary, fully writable Debian; `apt` works and changes persist.
 
     ## Current RC and validation boundaries
 
