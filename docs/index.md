@@ -1,12 +1,23 @@
-# lmlinux
+# lmlinux 的技术手记
 
-**Linux，内置可完全离线运行的本地语言模型。**
+**项目与个人笔记入口。**
 
-[进入 lmlinux 项目](lmlinux/index.md){ .md-button .md-button--primary }
 [English](en/index.md){ .md-button }
 
-lmlinux 将本地助手集成进 Debian 13.8.0 live Cinnamon，面向离线救援，以及无网络环境下的首次安装和首次启动。当前发布为 `13.8.0-rc1` 候选版本。
+## 项目
 
-- [项目入口与镜像下载](lmlinux/index.md)
-- [GitHub 源码仓库](https://github.com/lmlinux/lmlinux)
-- 技术笔记：[Artificial Intelligence](ai/index.md)（中文）
+### lmlinux
+
+内置本地语言模型的 Debian Linux 发行版，面向离线救援，以及无网络环境下的首次安装和首次启动。当前发布为 `13.8.0-rc1` 候选版本。
+
+- [中文说明与镜像下载](lmlinux/index.md)
+- [English overview and download](en/lmlinux/index.md)
+- [GitHub 源码与完整文档](https://github.com/lmlinux/lmlinux)
+
+## 个人笔记
+
+### Artificial Intelligence
+
+记录架构、排障与工程实践。
+
+[进入 Artificial Intelligence 笔记](ai/index.md){ .md-button .md-button--primary }

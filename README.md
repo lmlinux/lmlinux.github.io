@@ -2,7 +2,7 @@
 
 Source for <https://lmlinux.github.io>, built with MkDocs Material and deployed to GitHub Pages.
 
-The site contains bilingual lmlinux landing and download pages, links to the canonical project documentation, and Artificial Intelligence technical notes:
+The homepage is a directory for the lmlinux project and personal Artificial Intelligence notes. Separate, cross-linked Chinese and English lmlinux pages provide overview and download summaries and link to canonical project documentation:
 
 - Chinese project page: <https://lmlinux.github.io/lmlinux/>
 - English project page: <https://lmlinux.github.io/en/lmlinux/>
@@ -26,9 +26,9 @@ Open <http://127.0.0.1:8001/>. Port **8001** is the local preview port for this 
 
 ## Structure
 
-- `docs/index.md` — Chinese product landing page
+- `docs/index.md` — Chinese project and personal-notes directory
 - `docs/lmlinux/` — Chinese lmlinux overview and download page
-- `docs/en/` — English landing, overview, and download pages
+- `docs/en/` — English directory and lmlinux overview/download pages
 - `docs/ai/` — Artificial Intelligence notes
 - `hooks.py` — giscus comment integration
 - `mkdocs.yml` — navigation, theme, and plugin configuration
