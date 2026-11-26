@@ -54,7 +54,7 @@
 
     **A Debian-based Linux distribution with a local language model built in.**
 
-    lmlinux is based on Debian 13.8.0 live Cinnamon for offline rescue and for first installation and first boot without a network. llama-server provides local Qwen3.5-9B Q4_K_M inference, while hax handles assistant interaction and session save/resume. Model weights are baked into the image at build time and are not stored in the Git repository. Both the live session and an installed system are ordinary, fully writable Debian; `apt` works and changes persist.
+    lmlinux is based on Debian 13.8.0 live Cinnamon for offline rescue and for first-time installation and configuration without a network. llama-server provides local Qwen3.5-9B Q4_K_M inference, while hax handles assistant interaction and session save/resume. Model weights are baked into the image at build time and are not stored in the Git repository. Both the live session and an installed system are ordinary, fully writable Debian; `apt` works and changes persist.
 
     ## Current RC and validation boundaries
 
