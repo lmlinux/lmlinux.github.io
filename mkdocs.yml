@@ -73,3 +73,4 @@ nav:
   - lmlinux: lmlinux/index.md
   - Artificial Intelligence:
       - 概览: ai/index.md
+      - ChatOps 排障平台架构: ai/chatops-architecture.md
