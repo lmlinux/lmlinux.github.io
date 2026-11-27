@@ -8,13 +8,10 @@
 
     ## 当前候选版与验证边界
 
-    `13.8.0-rc1` 是候选发布，不是稳定版或 `latest` 版本。这个精确镜像已通过构建完整性检查、独立制品复核、离线 live 启动与安装到硬盘检查，以及离线已安装系统的冷启动、暖缓存追问和 bare-hax 检查。**这些检查并未完成 GA 前仍需通过的行为电池、完整离线救援 / 首次安装、真实用户和外部反馈门槛。**
-
-    同一 9B 栈已有两次成功的软件源修复。受控单故障测试只给自然语言请求、不提供修复命令，助手在 16 分 15 秒内把失效的仅 cdrom APT 源替换为 Debian 13 官方源；`apt-get update` 成功，独立更新与软件包解析检查也通过。最后一次安装测试中，用户实测另一次软件源修复约 8 分钟完成。
-
-    两次成功之间进行的另一场压力测试刻意连续叠加多个故障，全程无人干预，用于探索 9B 能力上限，并非重复上述单故障修复。该测试约 66 分钟后仍未完成：它把 APT 源改成标有 `[trusted=yes]` 的 HTTP 条目，改动 resolver/NetworkManager 状态，并转向 `dummy0`/veth 修复，最终仍未装上救援夹具。两次成功修复与这次未完成的压力测试是不同结果，任何一项都不单独代表完整救援场景已验收。多轮修复可能需要长时间等待，每项特权变更都应先审查。
-
-    安装后进入 GUI 较慢：开机时对 5.29 GiB 模型做 SHA-256 校验，与图形初始化重叠；16 GiB 内存、4 vCPU 的测试 VM 实测约 2 分钟进入桌面。另一次首次 HDD 启动曾出现未复现的黑屏，需要硬复位；后续终验通过。
+    - **版本：** `13.8.0-rc1` 是候选发布，不是稳定版或 `latest`。该镜像已通过构建完整性检查、独立制品复核、离线 live 启动与安装检查，以及离线已安装系统的冷启动、暖缓存追问和 bare-hax 检查。**这些检查均未完成 GA 前的行为电池、完整离线救援 / 首次安装、真实用户和外部反馈门槛。**
+    - **两次成功的软件源修复：** 受控单故障测试只给自然语言请求，助手在 16 分 15 秒内把失效的仅 cdrom 源替换为 Debian 13 官方源，`apt-get update` 及独立检查通过；最后一次安装测试中，用户实测另一次修复约 8 分钟完成。
+    - **未完成的多故障压力测试：** 刻意连续叠加故障探索 9B 上限，约 66 分钟未完成——把 APT 源改为 `[trusted=yes]` HTTP 条目、改动 resolver/NetworkManager、转向 `dummy0`/veth 修复。与上述成功是不同结果；多轮修复等待时间长，每项特权变更应先审查。
+    - **进入 GUI 较慢：** 开机时对 5.29 GiB 模型做 SHA-256 校验，与图形初始化重叠；16 GiB 内存、4 vCPU 测试 VM 实测约 2 分钟进入桌面。另一次首次 HDD 启动曾出现未复现的黑屏，需硬复位；后续终验通过。
 
     ## 下载镜像
 
@@ -58,13 +55,10 @@
 
     ## Current RC and validation boundaries
 
-    `13.8.0-rc1` is a release candidate, not a stable or `latest` release. This exact image passed build-integrity checks, an independent artifact review, offline live-boot and install-to-disk checks, and offline installed-system cold-start, warm-follow-up, and bare-hax checks. **These checks do not complete the behavioral, complete offline-rescue/first-install, real-user, or external-feedback gates required before GA.**
-
-    Two APT-source repairs succeeded with the same 9B stack. In a controlled single-fault test, the assistant received only a natural-language request, with no repair commands, and replaced a broken cdrom-only APT source with official Debian 13 repositories in 16m15s; `apt-get update` succeeded, and independent update and package-resolution checks passed. In the final installation test, the user observed another APT-source repair complete in about 8 minutes.
-
-    Between those successes, a separate stress test deliberately chained multiple faults to explore the 9B model's limits without human intervention during the attempt. It was not a repeat of the single-fault repair and did not finish after about 66 minutes: it changed APT sources to HTTP entries marked `[trusted=yes]`, altered resolver/NetworkManager state, and pursued `dummy0`/veth recovery without installing the rescue fixture. The two successful repairs and the incomplete stress test are separate results; none alone completes the broader rescue validation. Expect long waits and review every proposed privileged change.
-
-    Entering the GUI after installation is slow: boot-time SHA-256 verification of the 5.29 GiB model overlaps graphics startup, and the 16 GiB RAM / 4-vCPU test VM reached the desktop in about 2 minutes. A separate initial HDD boot had an unreproduced black-screen transient requiring a hard reset; subsequent final probes passed.
+    - **Release:** `13.8.0-rc1` is a release candidate, not a stable or `latest` release. This exact image passed build-integrity checks, an independent artifact review, offline live-boot and install-to-disk checks, and offline installed-system cold-start, warm-follow-up, and bare-hax checks. **These checks do not complete the behavioral, complete offline-rescue/first-install, real-user, or external-feedback gates required before GA.**
+    - **Two successful APT-source repairs:** in a controlled single-fault test given only a natural-language request, the assistant replaced a broken cdrom-only source with official Debian 13 repositories in 16m15s; `apt-get update` and independent checks passed. In the final installation test, the user observed another repair complete in about 8 minutes.
+    - **Incomplete multi-fault stress test:** deliberately chained faults to explore the 9B model's limits; it did not finish after about 66 minutes, switching APT sources to `[trusted=yes]` HTTP entries, altering resolver/NetworkManager state, and pursuing `dummy0`/veth recovery. This is a separate result from the successes above; expect long waits and review every privileged change.
+    - **Slow GUI entry:** boot-time SHA-256 verification of the 5.29 GiB model overlaps graphics startup; the 16 GiB RAM / 4-vCPU test VM reached the desktop in about 2 minutes. One initial HDD boot had an unreproduced black-screen transient requiring a hard reset; later probes passed.
 
     ## Download the image
 
