@@ -1,0 +1,11 @@
+/* 根首页两入口目录：桌面并排、窄屏堆叠；标题略放大便于扫读 */
+.md-typeset .home-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: .8rem;
+}
+.md-typeset .home-grid > ul > li {
+  padding: 1rem;
+}
+.md-typeset .home-grid > ul > li > p:first-child {
+  font-size: 1.05rem;
+}

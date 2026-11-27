@@ -8,6 +8,9 @@ edit_uri: edit/main/docs/
 hooks:
   - hooks.py
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   language: zh
