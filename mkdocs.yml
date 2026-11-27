@@ -78,3 +78,4 @@ nav:
       - 概览: ai/index.md
       - ChatOps 排障平台架构: ai/chatops-architecture.md
       - AI 编码生产力实证: ai/ai-coding-productivity.md
+      - Agent 安全工程: ai/agent-security.md
