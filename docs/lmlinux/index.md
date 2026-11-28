@@ -40,6 +40,10 @@
 
     在 live 桌面运行 Debian 安装器即可完全离线安装。9B 模型需要 **16 GiB 内存**，目标磁盘建议准备 **40 GiB 或更多**。装后首次进入 GUI 较慢（模型完整性校验与图形初始化重叠），测试 VM 上约 2 分钟；不同硬件耗时会不同，请先等待数分钟，若仍停在 tty1，可按 Ctrl+Alt+F7 选择图形 VT。
 
+    ## 单独安装到已有系统
+
+    AI 栈也可以不装 ISO、单独安装到已有的 Debian 13 amd64 系统：以 root 运行项目仓的 `packaging/ai-core/install.sh`。联网时自动拉取 sha256 钉死的 llama.cpp 引擎、hax 与 Qwen3.5-9B 模型；也可以把引擎与助手归档加 GGUF 模型文件预置到 U 盘，完全离线安装。预置清单、精确命令与目标机前提见 [packaging/ai-core 文档](https://github.com/lmlinux/lmlinux/tree/main/packaging/ai-core)。9B 模型需要 **16 GiB 内存**。
+
     ## 完整项目文档
 
     助手用法、特权操作边界、构建方法和组件许可统一维护在项目仓库，不在本站复制：
@@ -86,6 +90,10 @@
     ```
 
     Run the Debian installer from the live desktop to install entirely offline. The 9B model requires **16 GiB of RAM**; allow **40 GiB or more** for the target disk. The first GUI entry after installation is slow (model integrity verification overlaps graphics initialization), taking about 2 minutes on the test VM; timing varies by hardware, so wait a few minutes, and if a tty1 prompt remains, Ctrl+Alt+F7 selects the graphical VT.
+
+    ## Standalone install on an existing system
+
+    The AI stack also installs alone, without the ISO, on an existing Debian 13 amd64 system: run `packaging/ai-core/install.sh` from the project repository as root. With network access it fetches the sha256-pinned llama.cpp engine, hax, and the Qwen3.5-9B model; alternatively, stage the engine and harness archives plus the GGUF model file on a USB stick and install fully offline. The staging list, exact command, and prerequisites are in the [packaging/ai-core documentation](https://github.com/lmlinux/lmlinux/tree/main/packaging/ai-core). The 9B model needs **16 GiB of RAM**.
 
     ## Full project documentation
 
